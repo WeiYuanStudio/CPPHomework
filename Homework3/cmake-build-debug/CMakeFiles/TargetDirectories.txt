@@ -1,3 +1,0 @@
-/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir

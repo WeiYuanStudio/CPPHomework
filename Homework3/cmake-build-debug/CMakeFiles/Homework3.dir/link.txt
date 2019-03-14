@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Homework3.dir/main.cpp.o CMakeFiles/Homework3.dir/Depository.cpp.o CMakeFiles/Homework3.dir/Menu.cpp.o CMakeFiles/Homework3.dir/History.cpp.o  -o Homework3 
