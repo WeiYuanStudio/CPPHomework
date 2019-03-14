@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug"/>
+				<Option working_dir="/disk2/Document/CPPHomework/Homework3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug"/>
+				<Option working_dir="/disk2/Document/CPPHomework/Homework3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Homework3">
-				<Option output="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Homework3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug"/>
+				<Option output="/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Homework3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/disk2/Document/CPPHomework/Homework3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Homework3"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Homework3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Homework3/fast">
-				<Option output="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Homework3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug"/>
+				<Option output="/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Homework3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/disk2/Document/CPPHomework/Homework3/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,45 +65,45 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Homework3/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 Homework3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/weiyuan/CLionProjects/Homework3/cmake-build-debug"/>
+				<Option working_dir="/disk2/Document/CPPHomework/Homework3/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/disk2/Document/CPPHomework/Homework3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/Depository.cpp">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/Depository.cpp">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/Depository.h">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/Depository.h">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/History.cpp">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/History.cpp">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/History.h">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/History.h">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/Menu.cpp">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/Menu.cpp">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/Menu.h">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/Menu.h">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/main.cpp">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/main.cpp">
 			<Option target="Homework3"/>
 		</Unit>
-		<Unit filename="/home/weiyuan/CLionProjects/Homework3/CMakeLists.txt">
+		<Unit filename="/disk2/Document/CPPHomework/Homework3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

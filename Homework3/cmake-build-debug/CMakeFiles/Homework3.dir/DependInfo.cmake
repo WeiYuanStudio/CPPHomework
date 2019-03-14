@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/weiyuan/CLionProjects/Homework3/Depository.cpp" "/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Depository.cpp.o"
-  "/home/weiyuan/CLionProjects/Homework3/History.cpp" "/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/History.cpp.o"
-  "/home/weiyuan/CLionProjects/Homework3/Menu.cpp" "/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Menu.cpp.o"
-  "/home/weiyuan/CLionProjects/Homework3/main.cpp" "/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/main.cpp.o"
+  "/disk2/Document/CPPHomework/Homework3/Depository.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Depository.cpp.o"
+  "/disk2/Document/CPPHomework/Homework3/History.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/History.cpp.o"
+  "/disk2/Document/CPPHomework/Homework3/Menu.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Menu.cpp.o"
+  "/disk2/Document/CPPHomework/Homework3/main.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

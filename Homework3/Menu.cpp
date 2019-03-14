@@ -106,18 +106,19 @@ void Menu::DeleteGoods() {
 void Menu::EditGoods() {
     system("clear");
     Depository MyDepository;
-    cout << "请输入你需要进货的商品的商品编号" << endl;
-    int SearchGoodsNum;
-    int ResultsIndex = -1;
-    cin >> SearchGoodsNum;
-    for (int i = 0; i < MyDepository.GoodsData.size(); i++) {
-        if (MyDepository.GoodsData[i].GoodsNum == SearchGoodsNum) {
-            ResultsIndex = i;
-        }
-    }
+    cout << "----Edit Goods / 编辑商品----";
+//    cout << "请输入你需要进货的商品的商品编号" << endl;
+//    int SearchGoodsNum;
+    int ResultsIndex = MyDepository.SearchGoodsByID();
+//    cin >> SearchGoodsNum;
+//    for (int i = 0; i < MyDepository.GoodsData.size(); i++) {
+//        if (MyDepository.GoodsData[i].GoodsNum == SearchGoodsNum) {
+//            ResultsIndex = i;
+//        }
+//    }
 
     if (ResultsIndex == -1) {
-        cout << "没有找到符合条件的商品" << endl;
+//        cout << "没有找到符合条件的商品" << endl;
     } else {
         cout << "搜索结果如下" << endl;
         MyDepository.PrintGoods(ResultsIndex);
@@ -193,40 +194,46 @@ void Menu::SearchGoods() {
     cin >> MenuCode;
     switch (MenuCode) {
         case 1: {
-            cout << "请输入产品编号" << endl;
-            int SearchGoodsNum;
-            int ResultsIndex = -1;
-            cin >> SearchGoodsNum;
-            for (int i = 0; i < (int) MyDepository.GoodsData.size(); i++) {
-                if (MyDepository.GoodsData[i].GoodsNum == SearchGoodsNum) {
-                    ResultsIndex = i;
-                }
-            }
+//            cout << "请输入产品编号" << endl;
+//            int SearchGoodsNum;
+//            int ResultsIndex = -1;
+//            cin >> SearchGoodsNum;
+//            for (int i = 0; i < (int) MyDepository.GoodsData.size(); i++) {
+//                if (MyDepository.GoodsData[i].GoodsNum == SearchGoodsNum) {
+//                    ResultsIndex = i;
+//                }
+//            }
+//
+//            if (ResultsIndex == -1) {
+//                cout << "没有找到符合条件的商品" << endl;
+//            } else {
+//                cout << "搜索结果如下" << endl;
+//                MyDepository.PrintGoods(ResultsIndex);
+//            }
 
-            if (ResultsIndex == -1) {
-                cout << "没有找到符合条件的商品" << endl;
-            } else {
-                cout << "搜索结果如下" << endl;
-                MyDepository.PrintGoods(ResultsIndex);
-            }
+            MyDepository.SearchGoodsByID();
+
             break;
         }
         case 2: {
-            cout << "请输入产品名" << endl;
-            string SearchGoodsName;
-            int ResultsIndex = -1;
-            cin >> SearchGoodsName;
-            for (int i = 0; i < (int) MyDepository.GoodsData.size(); i++) {
-                if (MyDepository.GoodsData[i].GoodsName == SearchGoodsName) {
-                    ResultsIndex = i;
-                }
-            }
+//            cout << "请输入产品名" << endl;
+//            string SearchGoodsName;
+//            int ResultsIndex = -1;
+//            cin >> SearchGoodsName;
+//            for (int i = 0; i < (int) MyDepository.GoodsData.size(); i++) {
+//                if (MyDepository.GoodsData[i].GoodsName == SearchGoodsName) {
+//                    ResultsIndex = i;
+//                }
+//            }
+//
+//            if (ResultsIndex == -1) {
+//                cout << "没有找到符合条件的商品" << endl;
+//            } else {
+//                MyDepository.PrintGoods(ResultsIndex);
+//            }
 
-            if (ResultsIndex == -1) {
-                cout << "没有找到符合条件的商品" << endl;
-            } else {
-                MyDepository.PrintGoods(ResultsIndex);
-            }
+            MyDepository.SearchGoodsByName();
+
             break;
         }
         default:
@@ -239,21 +246,25 @@ void Menu::Purchase() {
     system("clear");
     Depository MyDepository;
     cout << "----Purchase＆Shipment / 进货＆出货----" << endl;
-    cout << "请输入产品编号" << endl;
-    int SearchGoodsNum;
-    int ResultsIndex = -1;
-    cin >> SearchGoodsNum;
-    for (int i = 0; i < (int) MyDepository.GoodsData.size(); i++) {
-        if (MyDepository.GoodsData[i].GoodsNum == SearchGoodsNum) {
-            ResultsIndex = i;
-        }
-    }
-    if (ResultsIndex == -1) {
-        cout << "没有找到符合条件的商品" << endl;
-    } else {
-        cout << "搜索结果如下" << endl;
-        MyDepository.PrintGoods(ResultsIndex);
-    }
+//    cout << "请输入产品编号" << endl;
+//    int SearchGoodsNum;
+//    int ResultsIndex = -1;
+//    cin >> SearchGoodsNum;
+//    for (int i = 0; i < (int) MyDepository.GoodsData.size(); i++) {
+//        if (MyDepository.GoodsData[i].GoodsNum == SearchGoodsNum) {
+//            ResultsIndex = i;
+//        }
+//    }
+//    if (ResultsIndex == -1) {
+//        cout << "没有找到符合条件的商品" << endl;
+//    } else {
+//        cout << "搜索结果如下" << endl;
+//        MyDepository.PrintGoods(ResultsIndex);
+//    }
+
+    int ResultsIndex = MyDepository.SearchGoodsByID();
+    if (ResultsIndex == -1)
+        return;
 
     cout << "进货还是出货呢(进／出)(P/S)" << endl;
     char P_S = 'N';
@@ -272,22 +283,27 @@ void Menu::Purchase() {
 
     cout << "商品:" << MyDepository.GoodsData[ResultsIndex].GoodsName << (P_S == 'P' || P_S == 'p' ? "进货" : "出货")
          << P_SNum << endl;
-
-
+    cout << "确定保存吗(Y/N)" << endl;
+    MyDepository.SaveGoods();
 }
 
 
 void Menu::PrintList() {
     system("clear");
     Depository MyDepository;
-    cout << "数据库一共有" << MyDepository.GoodsData.size() << "条数据" << endl;
-    for (auto &i : MyDepository.GoodsData) {
-        cout
-                << "产品编号" << i.GoodsNum << endl
-                << "产品名" << i.GoodsName << endl
-                << "产地" << i.GoodsOrigin << endl
-                << "产品数量" << i.GoodsQuantity << endl
-                << "产品价格" << i.GoodsPrice << endl << endl << endl;
+    cout << "数据库一共有" << (int) MyDepository.GoodsData.size() << "条数据" << endl << endl;
+
+//    for (auto &i : MyDepository.GoodsData) {
+//        cout
+//                << "产品编号" << i.GoodsNum << endl
+//                << "产品名" << i.GoodsName << endl
+//                << "产地" << i.GoodsOrigin << endl
+//                << "产品数量" << i.GoodsQuantity << endl
+//                << "产品价格" << i.GoodsPrice << endl << endl << endl;
+//    }
+
+    for (int GoodsIndex = 0; GoodsIndex < (int) MyDepository.GoodsData.size(); ++GoodsIndex) {
+        MyDepository.PrintGoods(GoodsIndex);
     }
     Menu::PauseMenu();
 }

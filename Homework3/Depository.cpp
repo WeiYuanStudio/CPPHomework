@@ -42,25 +42,25 @@ void Depository::AddGoods(Goods NewGoods) {
 void Depository::SaveGoods() {
     ofstream GoodsDataBase("/disk2/playground/Depository.database"); //此处为数据库路径
     if (GoodsDataBase) {
-        int DataBaseSize = (int)GoodsData.size();
+        int DataBaseSize = (int) GoodsData.size();
         GoodsDataBase << DataBaseSize << endl;
         for (int i = 0; i < DataBaseSize; i++) {
             GoodsDataBase
-            << GoodsData[i].GoodsNum << " "
-            <<GoodsData[i].GoodsName << " "
-            << GoodsData[i].GoodsOrigin << " "
-            << GoodsData[i].GoodsQuantity << " "
-            << GoodsData[i].GoodsPrice << endl;
+                    << GoodsData[i].GoodsNum << " "
+                    << GoodsData[i].GoodsName << " "
+                    << GoodsData[i].GoodsOrigin << " "
+                    << GoodsData[i].GoodsQuantity << " "
+                    << GoodsData[i].GoodsPrice << endl;
         }
         GoodsDataBase.close();
-        cout << "保存完毕" <<endl;
-    } else{
-        cout << "文件打开错误，保存失败！";
+        cout << "保存完毕" << endl;
+    } else {
+        cout << "文件打开错误，保存失败！" << endl;
     }
 }
 
 void Depository::DeleteGoods(int GoodsIndex) {
-    GoodsData.erase(GoodsData.begin()+GoodsIndex);
+    GoodsData.erase(GoodsData.begin() + GoodsIndex);
     SaveGoods();
 }
 
@@ -70,4 +70,43 @@ void Depository::PrintGoods(int GoodsIndex) {
          << "产地" << GoodsData[GoodsIndex].GoodsOrigin << endl
          << "产品数量" << GoodsData[GoodsIndex].GoodsQuantity << endl
          << "产品价格" << GoodsData[GoodsIndex].GoodsPrice << endl;
+}
+
+int Depository::SearchGoodsByID() {
+    int ResultsIndex = -1; //该变量为搜索结果在容器内的下标，-1为缺省值，说明未查找到相关信息
+    cout << "请输入产品编号" << endl;
+    int SearchGoodsNum;
+    cin >> SearchGoodsNum;
+    for (int i = 0; i < (int) GoodsData.size(); i++) {
+        if (GoodsData[i].GoodsNum == SearchGoodsNum) {
+            ResultsIndex = i;
+        }
+    }
+
+    if (ResultsIndex == -1) {
+        cout << "没有找到符合条件的商品" << endl;
+    } else {
+        cout << "搜索结果如下" << endl;
+        PrintGoods(ResultsIndex);
+    }
+    return ResultsIndex;
+}
+
+int Depository::SearchGoodsByName() {
+    int ResultsIndex = -1; //该变量为搜索结果在容器内的下标，-1为缺省值，说明未查找到相关信息
+    cout << "请输入产品名" << endl;
+    string SearchGoodsName;
+    cin >> SearchGoodsName;
+    for (int i = 0; i < (int) GoodsData.size(); i++) {
+        if (GoodsData[i].GoodsName == SearchGoodsName) {
+            ResultsIndex = i;
+        }
+    }
+    if (ResultsIndex == -1) {
+        cout << "没有找到符合条件的商品" << endl;
+    } else {
+        cout << "搜索结果如下" << endl;
+        PrintGoods(ResultsIndex);
+    }
+    return ResultsIndex;
 }

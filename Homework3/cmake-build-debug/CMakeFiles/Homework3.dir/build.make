@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /disk2/clion-2018.3.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /disk2/ProgramFile/clion-2018.3.4/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /disk2/clion-2018.3.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /disk2/ProgramFile/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/weiyuan/CLionProjects/Homework3
+CMAKE_SOURCE_DIR = /disk2/Document/CPPHomework/Homework3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/weiyuan/CLionProjects/Homework3/cmake-build-debug
+CMAKE_BINARY_DIR = /disk2/Document/CPPHomework/Homework3/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Homework3.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/Homework3.dir/flags.make
 
 CMakeFiles/Homework3.dir/main.cpp.o: CMakeFiles/Homework3.dir/flags.make
 CMakeFiles/Homework3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Homework3.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/main.cpp.o -c /home/weiyuan/CLionProjects/Homework3/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Homework3.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/main.cpp.o -c /disk2/Document/CPPHomework/Homework3/main.cpp
 
 CMakeFiles/Homework3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework3.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/weiyuan/CLionProjects/Homework3/main.cpp > CMakeFiles/Homework3.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /disk2/Document/CPPHomework/Homework3/main.cpp > CMakeFiles/Homework3.dir/main.cpp.i
 
 CMakeFiles/Homework3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework3.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/weiyuan/CLionProjects/Homework3/main.cpp -o CMakeFiles/Homework3.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /disk2/Document/CPPHomework/Homework3/main.cpp -o CMakeFiles/Homework3.dir/main.cpp.s
 
 CMakeFiles/Homework3.dir/Depository.cpp.o: CMakeFiles/Homework3.dir/flags.make
 CMakeFiles/Homework3.dir/Depository.cpp.o: ../Depository.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Homework3.dir/Depository.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/Depository.cpp.o -c /home/weiyuan/CLionProjects/Homework3/Depository.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Homework3.dir/Depository.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/Depository.cpp.o -c /disk2/Document/CPPHomework/Homework3/Depository.cpp
 
 CMakeFiles/Homework3.dir/Depository.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework3.dir/Depository.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/weiyuan/CLionProjects/Homework3/Depository.cpp > CMakeFiles/Homework3.dir/Depository.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /disk2/Document/CPPHomework/Homework3/Depository.cpp > CMakeFiles/Homework3.dir/Depository.cpp.i
 
 CMakeFiles/Homework3.dir/Depository.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework3.dir/Depository.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/weiyuan/CLionProjects/Homework3/Depository.cpp -o CMakeFiles/Homework3.dir/Depository.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /disk2/Document/CPPHomework/Homework3/Depository.cpp -o CMakeFiles/Homework3.dir/Depository.cpp.s
 
 CMakeFiles/Homework3.dir/Menu.cpp.o: CMakeFiles/Homework3.dir/flags.make
 CMakeFiles/Homework3.dir/Menu.cpp.o: ../Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Homework3.dir/Menu.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/Menu.cpp.o -c /home/weiyuan/CLionProjects/Homework3/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Homework3.dir/Menu.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/Menu.cpp.o -c /disk2/Document/CPPHomework/Homework3/Menu.cpp
 
 CMakeFiles/Homework3.dir/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework3.dir/Menu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/weiyuan/CLionProjects/Homework3/Menu.cpp > CMakeFiles/Homework3.dir/Menu.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /disk2/Document/CPPHomework/Homework3/Menu.cpp > CMakeFiles/Homework3.dir/Menu.cpp.i
 
 CMakeFiles/Homework3.dir/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework3.dir/Menu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/weiyuan/CLionProjects/Homework3/Menu.cpp -o CMakeFiles/Homework3.dir/Menu.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /disk2/Document/CPPHomework/Homework3/Menu.cpp -o CMakeFiles/Homework3.dir/Menu.cpp.s
 
 CMakeFiles/Homework3.dir/History.cpp.o: CMakeFiles/Homework3.dir/flags.make
 CMakeFiles/Homework3.dir/History.cpp.o: ../History.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Homework3.dir/History.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/History.cpp.o -c /home/weiyuan/CLionProjects/Homework3/History.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Homework3.dir/History.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework3.dir/History.cpp.o -c /disk2/Document/CPPHomework/Homework3/History.cpp
 
 CMakeFiles/Homework3.dir/History.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework3.dir/History.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/weiyuan/CLionProjects/Homework3/History.cpp > CMakeFiles/Homework3.dir/History.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /disk2/Document/CPPHomework/Homework3/History.cpp > CMakeFiles/Homework3.dir/History.cpp.i
 
 CMakeFiles/Homework3.dir/History.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework3.dir/History.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/weiyuan/CLionProjects/Homework3/History.cpp -o CMakeFiles/Homework3.dir/History.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /disk2/Document/CPPHomework/Homework3/History.cpp -o CMakeFiles/Homework3.dir/History.cpp.s
 
 # Object files for target Homework3
 Homework3_OBJECTS = \
@@ -125,7 +125,7 @@ Homework3: CMakeFiles/Homework3.dir/Menu.cpp.o
 Homework3: CMakeFiles/Homework3.dir/History.cpp.o
 Homework3: CMakeFiles/Homework3.dir/build.make
 Homework3: CMakeFiles/Homework3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Homework3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Homework3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Homework3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/Homework3.dir/clean:
 .PHONY : CMakeFiles/Homework3.dir/clean
 
 CMakeFiles/Homework3.dir/depend:
-	cd /home/weiyuan/CLionProjects/Homework3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/weiyuan/CLionProjects/Homework3 /home/weiyuan/CLionProjects/Homework3 /home/weiyuan/CLionProjects/Homework3/cmake-build-debug /home/weiyuan/CLionProjects/Homework3/cmake-build-debug /home/weiyuan/CLionProjects/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /disk2/Document/CPPHomework/Homework3/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /disk2/Document/CPPHomework/Homework3 /disk2/Document/CPPHomework/Homework3 /disk2/Document/CPPHomework/Homework3/cmake-build-debug /disk2/Document/CPPHomework/Homework3/cmake-build-debug /disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Homework3.dir/depend
 

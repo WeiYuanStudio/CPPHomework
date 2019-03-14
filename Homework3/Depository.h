@@ -24,6 +24,8 @@ public:
     void AddGoods(Goods NewGoods);
     void SaveGoods();
     void DeleteGoods(int GoodsIndex);
+    int SearchGoodsByID();
+    int SearchGoodsByName();
     void PrintGoods(int GoodsIndex);
     vector <Goods> GoodsData;
 };
