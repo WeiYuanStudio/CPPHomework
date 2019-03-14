@@ -3,3 +3,7 @@
 //
 
 #include "History.h"
+
+void History::SaveHistory() {
+
+}

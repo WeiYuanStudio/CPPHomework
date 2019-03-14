@@ -35,9 +35,12 @@ Depository::Depository() {
 }
 
 
+
 void Depository::AddGoods(Goods NewGoods) {
     GoodsData.push_back(NewGoods);
 }
+
+
 
 void Depository::SaveGoods() {
     ofstream GoodsDataBase("/disk2/playground/Depository.database"); //此处为数据库路径
@@ -59,10 +62,14 @@ void Depository::SaveGoods() {
     }
 }
 
+
+
 void Depository::DeleteGoods(int GoodsIndex) {
     GoodsData.erase(GoodsData.begin() + GoodsIndex);
     SaveGoods();
 }
+
+
 
 void Depository::PrintGoods(int GoodsIndex) {
     cout << "产品编号" << GoodsData[GoodsIndex].GoodsNum << endl
@@ -71,6 +78,8 @@ void Depository::PrintGoods(int GoodsIndex) {
          << "产品数量" << GoodsData[GoodsIndex].GoodsQuantity << endl
          << "产品价格" << GoodsData[GoodsIndex].GoodsPrice << endl;
 }
+
+
 
 int Depository::SearchGoodsByID() {
     int ResultsIndex = -1; //该变量为搜索结果在容器内的下标，-1为缺省值，说明未查找到相关信息
@@ -91,6 +100,8 @@ int Depository::SearchGoodsByID() {
     }
     return ResultsIndex;
 }
+
+
 
 int Depository::SearchGoodsByName() {
     int ResultsIndex = -1; //该变量为搜索结果在容器内的下标，-1为缺省值，说明未查找到相关信息

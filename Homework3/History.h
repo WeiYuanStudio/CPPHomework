@@ -5,9 +5,14 @@
 #ifndef HOMEWORK3_HISTORY_H
 #define HOMEWORK3_HISTORY_H
 
+#include <fstream>
+#include <vector>
+#include <iostream>
+using namespace std;
 
 class History {
-    
+public:
+    void SaveHistory();
 };
 
 

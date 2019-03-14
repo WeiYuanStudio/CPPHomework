@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/disk2/Document/CPPHomework/Homework3/Depository.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Depository.cpp.o"
-  "/disk2/Document/CPPHomework/Homework3/History.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/History.cpp.o"
-  "/disk2/Document/CPPHomework/Homework3/Menu.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Menu.cpp.o"
-  "/disk2/Document/CPPHomework/Homework3/main.cpp" "/disk2/Document/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/main.cpp.o"
+  "/Users/weiyuan/Documents/CPPHomework/Homework3/Depository.cpp" "/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Depository.cpp.o"
+  "/Users/weiyuan/Documents/CPPHomework/Homework3/History.cpp" "/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/History.cpp.o"
+  "/Users/weiyuan/Documents/CPPHomework/Homework3/Menu.cpp" "/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/Menu.cpp.o"
+  "/Users/weiyuan/Documents/CPPHomework/Homework3/main.cpp" "/Users/weiyuan/Documents/CPPHomework/Homework3/cmake-build-debug/CMakeFiles/Homework3.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
