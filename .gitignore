@@ -71,3 +71,6 @@ overs JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, And
 .DS_Store
 */.idea
 */.idea
+.idea/CPPHomework.iml
+.idea/.name
+.idea/*

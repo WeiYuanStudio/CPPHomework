@@ -287,6 +287,7 @@ void Menu::PauseMenu() {
 }
 
 void Menu::PrintHistory() {
+    system("clear");
     History MyHistory;
     MyHistory.PrintHistory();
     Menu::PauseMenu();
