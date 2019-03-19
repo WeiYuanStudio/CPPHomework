@@ -27,7 +27,8 @@ int main() {
             << "5.Purchase＆Shipment / 进货＆出货" << endl
             << "6.Inquiry Purchase Or Shipment Record / 查询进出货记录" << endl
             << "7.Print List / 输出所有商品列表" << endl
-            << "8.Exit / 退出" << endl;
+            << "8.Exit / 退出" << endl
+            << "9.历史记录" << endl;
         cin >> MenuCode;
         switch (MenuCode) {
             case 1:
@@ -55,6 +56,9 @@ int main() {
                 break;
             case 8:
                 exit(0);
+            case 9:
+                Menu::PrintHistory();
+                break;
             default:
                 system("clear");
                 cout << "输入了错误的菜单序号!" << endl;

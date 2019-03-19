@@ -20,6 +20,8 @@ public:
 
     static void PrintList();
 
+    static void PrintHistory();
+
     static void PauseMenu();
 };
 

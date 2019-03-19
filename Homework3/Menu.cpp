@@ -4,6 +4,7 @@
 
 #include "Menu.h"
 #include "Depository.h"
+#include "History.h"
 #include <iostream>
 
 using namespace std;
@@ -237,7 +238,12 @@ void Menu::Purchase() {
         } else if (P_S == 'S' || P_S == 's') {
             MyDepository.GoodsData[ResultsIndex].GoodsQuantity -= P_SNum;
         }
-    MyDepository.SaveGoods();
+        MyDepository.SaveGoods();
+
+        
+        History MyHistory;
+        Historys NewHistorys;
+        MyHistory.AddHistory(NewHistorys);
     }
 }
 
@@ -265,4 +271,9 @@ void Menu::PauseMenu() {
     cin.ignore();
     cin.get();
     system("clear");
+}
+
+void Menu::PrintHistory() {
+    History MyHistory;
+    MyHistory.PrintHistory();
 }
