@@ -27,7 +27,8 @@ int main() {
             << "5.Purchase＆Shipment / 进货＆出货" << endl
             << "6.Inquiry Purchase Or Shipment Record / 查询进出货记录" << endl
             << "7.Print List / 输出所有商品列表" << endl
-            << "8.Exit / 退出" << endl;
+            << "8.History / 历史记录" << endl
+            << "9.Exit / 退出" << endl;
         cin >> MenuCode;
         switch (MenuCode) {
             case 1:
@@ -54,6 +55,9 @@ int main() {
                 Menu::PrintList();
                 break;
             case 8:
+                Menu::PrintHistory();
+                break;
+            case 9:
                 exit(0);
             default:
                 system("clear");
@@ -66,6 +70,7 @@ int main() {
              << "这段代码将清理进入fail状态的cin，由于时间和精力原因，无法让每一个输入都加入错误判断!！！" << endl;
         cin.clear();
         cin.ignore();
+        Menu::PauseMenu();
     }
     }
 }
