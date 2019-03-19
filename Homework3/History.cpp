@@ -76,7 +76,7 @@ void History::PrintHistory() {
              << "进出货：" << (i.P_S == 'P' || i.P_S == 'p' ?"进货":"出货") << endl
              << "交易方：" << i.Manufacturer << endl
              << "交易价格:" << i.P_S_Price << endl
-             << "交易数量:" << i.P_S_Quantity << endl;
+             << "交易数量:" << i.P_S_Quantity << endl << endl << endl;
     }
 }
 

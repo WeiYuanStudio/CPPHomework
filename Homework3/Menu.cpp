@@ -222,6 +222,10 @@ void Menu::Purchase() {
     } else if (P_S == 'S' || P_S == 's') {
         cout << "出货多少呢？" << endl;
         cin >> P_S_Quantity;
+        if (P_S_Quantity > MyDepository.GoodsData[ResultsIndex].GoodsQuantity) {
+            cout << "仓库缺货" << endl;
+            return;
+        }
     } else {
         cout << "请输入正确的菜单序号(进／出)(P/S)" << endl;
         return;
