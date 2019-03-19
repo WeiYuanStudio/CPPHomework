@@ -214,36 +214,49 @@ void Menu::Purchase() {
 
     cout << "进货还是出货呢(进／出)(P/S)" << endl;
     char P_S = 'N';
-    int P_SNum = 0;
+    int P_S_Quantity = 0;
     cin >> P_S;
     if (P_S == 'P' || P_S == 'p') {
         cout << "进货多少呢？" << endl;
-        cin >> P_SNum;
+        cin >> P_S_Quantity;
     } else if (P_S == 'S' || P_S == 's') {
         cout << "出货多少呢？" << endl;
-        cin >> P_SNum;
+        cin >> P_S_Quantity;
     } else {
         cout << "请输入正确的菜单序号(进／出)(P/S)" << endl;
         return;
     }
 
+    string Manufacturer;
+    cout << "请输入交易方信息" << endl;
+    cin >> Manufacturer;
+
+    int P_S_Price;
+    cout << "请输入进出货价格" << endl;
+    cin >> P_S_Price;
+
     cout << "商品:" << MyDepository.GoodsData[ResultsIndex].GoodsName << (P_S == 'P' || P_S == 'p' ? "进货" : "出货")
-         << P_SNum << endl;
+         << P_S_Quantity << endl;
     cout << "确定保存吗(Y/N)" << endl;
     char save = 'N';
     cin >> save;
     if (save == 'Y' || save == 'y') {
         if (P_S == 'P' || P_S == 'p') {
-            MyDepository.GoodsData[ResultsIndex].GoodsQuantity += P_SNum;
+            MyDepository.GoodsData[ResultsIndex].GoodsQuantity += P_S_Quantity;
         } else if (P_S == 'S' || P_S == 's') {
-            MyDepository.GoodsData[ResultsIndex].GoodsQuantity -= P_SNum;
+            MyDepository.GoodsData[ResultsIndex].GoodsQuantity -= P_S_Quantity;
         }
         MyDepository.SaveGoods();
 
-        
         History MyHistory;
         Historys NewHistorys;
+        NewHistorys.GoodsIndex = ResultsIndex;
+        NewHistorys.P_S = P_S;
+        NewHistorys.Manufacturer = Manufacturer;
+        NewHistorys.P_S_Price = P_S_Price;
+        NewHistorys.P_S_Quantity = P_S_Quantity;
         MyHistory.AddHistory(NewHistorys);
+        MyHistory.SaveHistory();
     }
 }
 
@@ -276,4 +289,5 @@ void Menu::PauseMenu() {
 void Menu::PrintHistory() {
     History MyHistory;
     MyHistory.PrintHistory();
+    Menu::PauseMenu();
 }

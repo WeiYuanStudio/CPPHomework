@@ -27,7 +27,7 @@ struct Historys {
     tm HistorysTime; //进出货时间
     string Manufacturer; //厂家
     int P_S_Price; //进出货价格
-    int NUM; //进货出货量
+    int P_S_Quantity; //进货出货量
 };
 
 
