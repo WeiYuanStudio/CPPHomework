@@ -16,10 +16,6 @@ int main() {
     << "4.西藏" << endl;
     int target;
     cin >> target;
-    if(target != 1 || target != 2 || target != 3 ||target != 4){
-        cout << "错误的输入" << endl;
-        exit(0);
-    }
     cout << "请输入快件重量 / Kg" << endl;
     int weight;
     cin >> weight;

@@ -13,7 +13,6 @@ bool Test(int num) {
     int D5 = num % 100000 / 10000;
     num -= D5;
     int D6 = num % 1000000 / 100000;
-    //cout << D1 << "  " << D2 << "  " << D3 << "  " << D4 << "  " << D5 << "  " << D6; 输出各位数的数字，调试用
     if (D1 == D6 && D2 == D5 && D3 == D4)
         return true;
     else
