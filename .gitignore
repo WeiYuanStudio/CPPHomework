@@ -74,3 +74,5 @@ overs JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, And
 .idea/CPPHomework.iml
 .idea/.name
 .idea/*
+
+*.class
