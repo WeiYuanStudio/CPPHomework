@@ -1,5 +1,7 @@
 # LightMonitor
 
+**该作业项目已被分出仓库单独放置。请查看本人的GitHub仓库首页寻找LightMonitor。**
+
 网络监听程序
 
 通过HTTP协议进行通讯
@@ -18,9 +20,9 @@ Server端如果时间充足的话，考虑使用sql储存数据，无需部署�
 
 客户端采用cli的方式启动，通过参数启动，传入启动所需的数据，比如说服务器的IP和Port或者是可选的usersession。usersession由服务端随机生成，作为认装。防止冒充用户（usersession可以加入文件保存到本地功能使用java.util.Properties）
 
-## Client To Server
+## API Docs
 
-### Register HTTP/POST
+### Register HTTP/GET
 
 Request
 
@@ -37,15 +39,13 @@ Response
 | usersession | Random String by Server                   |
 | id          | Sort by client first request time         |
 
-### Heartbeat HTTP/POST
+### Heartbeat HTTP/GET
 
 Request
 
-| Parameter   | Description                         |
-|-------------|-------------------------------------|
-| usersession | Random String by Server             |
-| clientname  | Set by Client cli startup parameter |
-| clientinfo  | By System.getProperty(os.name)      |
+| Parameter   | Description             |
+|-------------|-------------------------|
+| usersession | Random String by Server |
 
 Response
 
@@ -54,21 +54,14 @@ Response
 | code      | StatusCode                                |
 | message   | Return server message print to client cli |
 
-## ~~WebPanel To Server~~ Use JSP
+### Sendinfo HTTP/POST
 
-Get all clients status from LightMonitor Server
+Request
 
-GET JSON(JSON Array)
-
-| Parameter    | Description                         |
-|--------------|-------------------------------------|
-| id           | Sort by client first request time   |
-| clientstatus | Online / Offline                    |
-| clientname   | Set by Client cli startup parameter |
-| clientip     | Get From Request IP                 |
-| clientinfo   | By System.getProperty(os.name)      |
-| pkgnum       | Client Request Package Count        |
-| latestonline | Lastest client active time          |
+| Parameter   | Description             |
+|-------------|-------------------------|
+| usersession | Random String by Server |
+| clientinfo  | Send info to server     |
 
 ## SQL
 
@@ -78,6 +71,6 @@ GET JSON(JSON Array)
 | usersession  | Random String by Server             |
 | clientname   | Set by Client cli startup parameter |
 | clientip     | Get From Request IP                 |
-| clientinfo   | By System.getProperty(os.name)      |
+| clientinfo   | Send info to server                 |
 | pkgnum       | Client Request Package Count        |
 | latestonline | Lastest client active time          |
