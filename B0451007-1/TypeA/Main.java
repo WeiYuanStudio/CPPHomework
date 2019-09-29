@@ -15,6 +15,6 @@ public class Main {
         NumFile outFile = new NumFile("." + File.separatorChar + "number.txt");
         outFile.loadList(numList);
         inFile.splitNumWriter(System.out); //Print ArrayList to Console
-        outFile.saveFile(); //
+        outFile.saveFile(); 
     }
 }
