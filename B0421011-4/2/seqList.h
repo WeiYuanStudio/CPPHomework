@@ -9,7 +9,7 @@
 #include <iostream>
 
 template<class T> //T为顺序表储存的元素个数
-class seqList {
+class seqList : List<T> {
 private:
     T *data;//动态数组
     int curLength;//当前顺{}{}序表中存储的元素个数
@@ -52,8 +52,14 @@ public:
             cout << endl;
         }
     } //遍历顺序表
-
-    void inverse();//逆置顺序表
+    void inverse() {
+        T tmp;
+        for (int i = 0; i < curLength / 2; i++) {
+            tmp = data[i];
+            data[i] = data[curLength - i - 1];
+            data[curLength - i - 1] = tmp;
+        }
+    }//逆置顺序表
     void insert(int i, const T &value) {
         if (i < 0 || i > curLength) throw outOfRange();
         if (curLength == maxSize) resize();
@@ -61,7 +67,11 @@ public:
         data[i] = value;
         ++curLength;
     };//在位序i处插入值为value的元素，表长加一
-    void remove(int i);//删除位序i的元素，表长减1
+    void remove(int i) {
+        if (i < 0 || i > curLength - 1) throw outOfRange();
+        for (int j = i; j < curLength - 1; j++) data[j] = data[j + 1];
+        --curLength;
+    }//删除位序i的元素，表长减1
     int search(const T &value) const {
         for (int i = 0; i < curLength; i++) {
             if (value == data[i])
@@ -69,7 +79,9 @@ public:
         }
         return -1;
     };//查找值为value元素的第一次出现的位序
-    T visit(int i) const;//访问位序为i的元素的值，“位序0”表示第一个元素
+    T visit(int i) const {
+        return data[i];
+    };//访问位序为i的元素的值，“位序0”表示第一个元素
 };
 
 #endif //LIST_SEQLIST_H
