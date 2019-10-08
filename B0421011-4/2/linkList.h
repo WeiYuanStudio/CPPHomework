@@ -86,7 +86,20 @@ public:
     }
 
     void remove(int i) override {
-
+        Node *p, *pre;
+        if (i < 0 || i > curLength)
+            throw outOfRange();
+        pre = getPosition(i - 1);
+        p = pre->next;
+        if(p == tail) {
+            tail = pre;
+            pre->next = NULL;
+            delete p;
+        } else {
+            pre->next = p->next;
+            delete p;
+        }
+        --curLength;
     }
 
     int search(const T &value) const override { //搜索元素位序
@@ -123,10 +136,13 @@ public:
 
     void traverse() const override { //遍历表
         Node *p = head->next;
+        if(p == NULL)
+            cout << "List Empty" << endl;
         while (p != NULL) {
-            cout << p->data << " ";
+            cout << p->data << "  ";
             p = p->next;
         }
+        cout << endl;
     }
 
     void inverse() override { //转置表

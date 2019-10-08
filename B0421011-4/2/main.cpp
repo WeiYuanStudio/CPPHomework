@@ -17,5 +17,7 @@ int main() {
     linkList<int> listB;
     listB.insert(0, 1);
     listB.insert(0, 2);
+    listB.insert(0, 3);
+    listB.remove(0);
     listB.traverse();
 }
