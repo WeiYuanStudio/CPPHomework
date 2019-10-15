@@ -85,6 +85,20 @@ public:
         ++curLength;
     }
 
+	void headCreate(const T &value) { //头插法
+		Node *p = new Node(value, head->next);
+		head->next = p;
+		if(head ==tail)
+			tail = p;
+		++curLength;
+	}
+
+	void tailCreate(const T &value) { //尾插法
+		Node *p = new Node(value);
+		tail->next = p;
+		tail = p;
+		++curLength;
+	}
     void remove(int i) override {
         Node *p, *pre;
         if (i < 0 || i > curLength)
