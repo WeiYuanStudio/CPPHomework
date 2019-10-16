@@ -20,6 +20,7 @@ private:
      * 表满时扩大表空间
      */
     void resize() {
+        std::cout << "Resizing" << endl;
         T *p = data; //p指针指向原数组
         maxSize * 2; //空间容量*2
         data = new T[maxSize]; //创建新容量数组
@@ -89,7 +90,6 @@ public:
     void traverse() const {
         if (empty()) cout << "List Empty" << endl;
         else {
-            cout << "Traverse seqList" << endl;
             for (int i = 0; i < curLength; i++) {
                 cout << data[i] << "  ";
             }
