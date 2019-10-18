@@ -26,6 +26,9 @@ private:
     Node *head, *tail;
     int curLength;
 public:
+    /**
+     * 无参构造
+     */
     doubleLinkList() {
         head = new Node();
         tail = new Node();
@@ -38,7 +41,15 @@ public:
      * 清空
      */
     void clear() override{
-
+        Node *p = head->next, *tmp;
+        head->next = tail;
+        tail->prior =  head;
+        while(p != tail) {
+            tmp = p->next;
+            delete p;
+            p = tmp;
+        }
+        curLength = 0;
     }
 
     /**
@@ -52,13 +63,15 @@ public:
      * 求线性表长度
      */
     int size() const {
-        return -1;
+        return curLength;
     }
 
     /**
      * 按照index插入
      */
     void insert(int i, const T &value) override{
+        if(i < 0 || i > curLength)
+            throw outOfRange();
         Node *p = head->next;
         for (int j = 0; j < i; ++j) {   
             p = p->next;
@@ -66,12 +79,15 @@ public:
         Node *tmp = new Node(value, p->prior, p);
         p->prior->next = tmp;
         p->prior = tmp;
+        ++curLength;
     }
 
     /**
      * 移除节点
      */
     void remove(int i) {
+        if(i < 0 || i > curLength)
+            throw outOfRange();
         Node *p = head->next;
         for (int j = 0; j < i; ++j) {   
             p = p->next;
@@ -79,6 +95,7 @@ public:
         p->prior->next = p->next;
         p->next->prior = p->prior;
         delete p;
+        --curLength;
     }
 
     /**
@@ -91,6 +108,8 @@ public:
             p = p->next;
             ++count;
         }
+        if(p == tail)
+            return -1;
         return count;
     }
 
@@ -114,7 +133,20 @@ public:
     /**
      * 逆置双链表
      */
-    void inverse() override {}
+    void inverse() override {
+        Node *tmp, *p;
+        p = head->next;
+        head->next = tail;
+        tail->prior = head;
+        while(p != tail) {
+            tmp = p->next;
+            p->next = head->next;
+            p->prior = head;
+            head->next->prior = p;
+            head->next = p;
+            p = tmp;
+        }
+    }
     ~doubleLinkList() {}
 };
 

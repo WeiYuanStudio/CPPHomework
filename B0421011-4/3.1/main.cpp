@@ -16,12 +16,24 @@ int main()
     cout << "遍历表" << endl;
     list.traverse();
 
+    cout << "逆置表" << endl;
+    list.inverse();
+
+    cout << "遍历表" << endl;
+    list.traverse();
+
     cout << "查找数字5" << endl;
     int index = list.search(5);
     cout << "Index: " << index << endl;
 
     cout << "删除该元素" << endl;
     list.remove(index);
+
+    cout << "遍历表" << endl;
+    list.traverse();
+
+    cout << "清空表" << endl;
+    list.clear();
 
     cout << "遍历表" << endl;
     list.traverse();
