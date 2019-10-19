@@ -28,9 +28,10 @@
 
 数据类型参见官方文档 - Datatypes In SQLite Version 3 - <https://www.sqlite.org/datatype3.html>
 
-| id | full_title       | isbn          | publisher              | author      | publish_year |
-|----|------------------|---------------|------------------------|-------------|--------------|
-| 0  | Thinking In Java | 9783827268969 | Markt + Technik Verlag | Bruce Eckel | 2005         |
+| id                   | full_title       | isbn          | publisher              | author      | publish_year |
+|----------------------|------------------|---------------|------------------------|-------------|--------------|
+| 0                    | Thinking In Java | 9783827268969 | Markt + Technik Verlag | Bruce Eckel | 2005         |
+| INTERGER PRIMARY KEY | TEXT             | TEXT          | TEXT                   | TEXT        | INTEGER      |
 
 ## 参考资料
 

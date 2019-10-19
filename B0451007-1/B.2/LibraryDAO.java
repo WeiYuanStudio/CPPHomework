@@ -9,12 +9,13 @@ import java.sql.ResultSet;
 class LibraryDAO {
 
     //数据库操作
-    private static final String CHECK_TABLE_SQL = "SELECT name FROM sqlite_master WHERE type='table' AND name=?";
+    private static final String tableName = "library";
 
+    private static final String CHECK_TABLE_SQL = "SELECT name FROM sqlite_master WHERE type='table' AND name=?";
+    private static final String INSERT_NEW_BOOK = "INSERT INTO " + tableName + " VALUES(?, ?, ?, ?, ?, ?)";
 
     private String sqlitePath; //数据库文件路径
-
-    private static final String tableName = "library";
+    private Connection connection;
 
     /**
      * Load JDBC Driver and create new table
@@ -36,6 +37,25 @@ class LibraryDAO {
         } else {
             System.out.println("TABLE <" + tableName + "> found");
         }
+    }
+
+    /**
+     * Insert new book into database
+     */
+    int insertBook(BookBean book) throws SQLException {
+        //TODO: Check if id illegal
+        Connection connection = getConnection(sqlitePath);
+
+        PreparedStatement ps = connection.prepareStatement(INSERT_NEW_BOOK);
+        ps.setInt(1, book.getId());
+        ps.setString(2, book.getTitle());
+        ps.setString(3, book.getIsbn());
+        ps.setString(4, book.getPublisher());
+        ps.setString(5, book.getAuthor());
+        ps.setInt(6, book.getPublishYear());
+        ps.executeUpdate();
+        ps.close();
+        return book.getId();
     }
 
     /**
@@ -79,6 +99,9 @@ class LibraryDAO {
      * @return connection
      */
     private Connection getConnection(String sqlitePath) throws SQLException {
-        return DriverManager.getConnection("jdbc:sqlite:".concat(sqlitePath)); //建立数据库连接;
+        if(connection == null) {
+            connection = DriverManager.getConnection("jdbc:sqlite:".concat(sqlitePath)); //建立数据库连接;
+        }
+        return connection;
     }
 }
