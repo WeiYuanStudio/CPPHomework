@@ -22,6 +22,10 @@ class BookBean {
         this.publishYear = publishYear;
     }
     
+    void printInfo() {
+        System.out.println("Book info: " + id + " | " + title + " | " + isbn + " | " + publishYear + " | " + author + " | " + publishYear);
+    }
+
     public int getId() {
         return this.id;
     }

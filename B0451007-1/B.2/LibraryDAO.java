@@ -13,6 +13,7 @@ class LibraryDAO {
 
     private static final String CHECK_TABLE_SQL = "SELECT name FROM sqlite_master WHERE type='table' AND name=?";
     private static final String INSERT_NEW_BOOK = "INSERT INTO " + tableName + " VALUES(?, ?, ?, ?, ?, ?)";
+    private static final String ID_QUERY_BOOK = "SELECT * FROM " + tableName + " WHERE id=?";
 
     private String sqlitePath; //数据库文件路径
     private Connection connection;
@@ -32,7 +33,7 @@ class LibraryDAO {
         boolean tableStatus = checkTable(tableName);
         System.out.println("Check if TABLE <" + tableName + "> exsist");
         if(!tableStatus) {
-            System.out.println("TABLE <" + tableName + "> not found, Create TABLE");
+            System.out.println("TABLE <" + tableName + "> not found, create TABLE");
             createEmptyTable();
         } else {
             System.out.println("TABLE <" + tableName + "> found");
@@ -56,6 +57,24 @@ class LibraryDAO {
         ps.executeUpdate();
         ps.close();
         return book.getId();
+    }
+
+    /** */
+    BookBean getBook(int id) throws SQLException {
+        Connection connection = getConnection(sqlitePath);
+
+        PreparedStatement ps = connection.prepareStatement(ID_QUERY_BOOK);
+        ps.setInt(1, id);
+        ResultSet set = ps.executeQuery();
+        BookBean book = new BookBean(
+            id,
+            set.getString("full_title"),
+            set.getString("isbn"),
+            set.getString("publisher"),
+            set.getString("author"),
+            set.getInt("publish_year")
+        );
+        return book;
     }
 
     /**

@@ -12,5 +12,7 @@ class Main {
             2005
         );
         library.insertBook(book);
+        BookBean book2 = library.getBook(1);
+        book2.printInfo();
     }
 }
