@@ -14,5 +14,15 @@ class Main {
         library.insertBook(book);
         BookBean book2 = library.getBook(1);
         book2.printInfo();
+        BookBean book3 = new BookBean(
+            2,
+            "C++",
+            "9783827268969",
+            "Markt + Technik Verlag",
+            "Bruce Eckel",
+            2005
+        );
+        library.insertBook(book3);
+        // library.deleteBook(1);
     }
 }

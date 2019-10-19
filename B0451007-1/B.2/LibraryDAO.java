@@ -14,6 +14,7 @@ class LibraryDAO {
     private static final String CHECK_TABLE_SQL = "SELECT name FROM sqlite_master WHERE type='table' AND name=?";
     private static final String INSERT_NEW_BOOK = "INSERT INTO " + tableName + " VALUES(?, ?, ?, ?, ?, ?)";
     private static final String ID_QUERY_BOOK = "SELECT * FROM " + tableName + " WHERE id=?";
+    private static final String ID_DELETE_BOOK = "DELETE FROM " + tableName + " WHERE id=?";
 
     private String sqlitePath; //数据库文件路径
     private Connection connection;
@@ -59,7 +60,12 @@ class LibraryDAO {
         return book.getId();
     }
 
-    /** */
+    /**
+     * Get book by id
+     * 
+     * @param id Book id
+     * @return BookBean
+     */
     BookBean getBook(int id) throws SQLException {
         Connection connection = getConnection(sqlitePath);
 
@@ -75,6 +81,14 @@ class LibraryDAO {
             set.getInt("publish_year")
         );
         return book;
+    }
+
+    void deleteBook(int id) throws SQLException {
+        Connection connection = getConnection(sqlitePath);
+
+        PreparedStatement ps = connection.prepareStatement(ID_DELETE_BOOK);
+        ps.setInt(1, id);
+        ps.executeUpdate();
     }
 
     /**
@@ -95,6 +109,10 @@ class LibraryDAO {
         return false;
     }
 
+    /**
+     * Create a empty table
+     * @throws SQLException
+     */
     private void createEmptyTable() throws SQLException {
         Connection connection = getConnection(sqlitePath);
 
