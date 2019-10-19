@@ -24,6 +24,14 @@
 
 ## 数据库表
 
-| id | full_title       | isbn          | publisher              | author      | publish_date |
+为了方便演示以及调试，不采用MySQL等采用网络连接的数据库，而是采用轻量的SQLite3
+
+数据类型参见官方文档 - Datatypes In SQLite Version 3 - <https://www.sqlite.org/datatype3.html>
+
+| id | full_title       | isbn          | publisher              | author      | publish_year |
 |----|------------------|---------------|------------------------|-------------|--------------|
 | 0  | Thinking In Java | 9783827268969 | Markt + Technik Verlag | Bruce Eckel | 2005         |
+
+## 参考资料
+
+Sqlite3 官方文档 数据类型
