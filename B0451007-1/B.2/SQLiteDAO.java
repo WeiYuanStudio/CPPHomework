@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
-class LibraryDAO {
+class SQLiteDAO implements DAO {
 
     //数据库操作
     private static final String tableName = "library";
@@ -22,7 +22,7 @@ class LibraryDAO {
     /**
      * Load JDBC Driver and create new table
      */
-    LibraryDAO(String sqlitePath) throws SQLException, ClassNotFoundException {
+    SQLiteDAO(String sqlitePath) throws SQLException, ClassNotFoundException {
         this.sqlitePath = sqlitePath; //设定数据库路径
 
         //加载sqlite驱动
@@ -44,7 +44,8 @@ class LibraryDAO {
     /**
      * Insert new book into database
      */
-    int insertBook(BookBean book) throws SQLException {
+    @Override
+    public int insertBook(BookBean book) throws SQLException {
         //TODO: Check if id illegal
         Connection connection = getConnection(sqlitePath);
 
@@ -66,7 +67,8 @@ class LibraryDAO {
      * @param id Book id
      * @return BookBean
      */
-    BookBean getBook(int id) throws SQLException {
+    @Override
+    public BookBean getBook(int id) throws SQLException {
         Connection connection = getConnection(sqlitePath);
 
         PreparedStatement ps = connection.prepareStatement(ID_QUERY_BOOK);
@@ -83,7 +85,8 @@ class LibraryDAO {
         return book;
     }
 
-    void deleteBook(int id) throws SQLException {
+    @Override
+    public void deleteBook(int id) throws SQLException {
         Connection connection = getConnection(sqlitePath);
 
         PreparedStatement ps = connection.prepareStatement(ID_DELETE_BOOK);
