@@ -31,12 +31,23 @@ class MysqlDAO implements DAO {
         this.db_name = db_name;
         this.user = user;
         this.password = password;
+        sqlLoad();
+    }
 
-        //加载sql驱动
-        Class.forName("com.mysql.jdbc.Driver"); //使用forClass加载sqlite-JDBC驱动
-        System.out.println("Load MySQL JDBC driver success");
+    /**
+     * 通过SQLPropertiesLoader实例化对象
+     * @param loader
+     * @throws SQLException
+     * @throws ClassNotFoundException
+     */
+    MysqlDAO(SQLPropertyLoader loader) throws SQLException, ClassNotFoundException {
+        this.sqlPath = loader.getSQLPath();
+        this.port = loader.getPort();
+        this.db_name = loader.getDataBaseName();
+        this.user = loader.getUser();
+        this.password = loader.getPassword();
 
-        createEmptyTable();
+        sqlLoad();
     }
 
     /**
@@ -138,5 +149,18 @@ class MysqlDAO implements DAO {
             ); //建立数据库连接;
         }
         return connection;
+    }
+
+    /**
+     * 初始化驱动，新建数据库表
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
+    private void sqlLoad() throws ClassNotFoundException, SQLException {
+        //加载sql驱动
+        Class.forName("com.mysql.jdbc.Driver"); //使用forClass加载sqlite-JDBC驱动
+        System.out.println("Load MySQL JDBC driver success");
+
+        createEmptyTable();
     }
 }

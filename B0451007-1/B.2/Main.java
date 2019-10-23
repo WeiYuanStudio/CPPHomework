@@ -1,10 +1,9 @@
 import java.sql.SQLException;
-import java.util.Scanner;
 
 class Main {
     
     /**
-     *  提炼方法，简化插入测试
+     *  提炼方法，简化数据库插入测试
      */
     static void insertLibrary(DAO library) {
         System.out.println("插入数据到DAO对象");
@@ -38,17 +37,18 @@ class Main {
         insertLibrary(sqlLibrary);
         System.out.println("sqlite数据库写入完毕");
 
-        System.out.println("请依次输入Mysql数据库的远程地址，端口，数据库名，用户名，密码");
-        Scanner sc = new Scanner(System.in);
+        System.out.println("读取Mysql配置文件");
+        SQLPropertyLoader loader = new SQLPropertyLoader("MySQL.properties");
 
-        DAO mysqlLibrary = new MysqlDAO( //TODO: 这里有输入流的问题，可能是Win的问题。使用Properties重构
-            sc.nextLine(),
-            sc.nextInt(),
-            sc.nextLine(),
-            sc.nextLine(),
-            sc.nextLine()
+        DAO mysqlLibrary = new MysqlDAO(
+            loader.getSQLPath(),
+            loader.getPort(),
+            loader.getDataBaseName(),
+            loader.getUser(),
+            loader.getPassword()
         );
-        sc.close();
         insertLibrary(mysqlLibrary);
+        System.out.println("Mysql写入完毕");
     }
+
 }

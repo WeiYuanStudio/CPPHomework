@@ -1,0 +1,11 @@
+# Mysql Properties file template
+
+SQLPath = XXXX.COM
+
+Port = 3306
+
+DatabaseName = library
+
+User = root
+
+Password = 0000
