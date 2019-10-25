@@ -3,69 +3,78 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 class NumFile {
-    private String filePath;
-    private File numFile;
-    private String fileString = null;
-    private ArrayList<Integer> numList = new ArrayList<Integer>();
+    private String filePath; //文件路径
+    private File numFile; //文件对象
+    private String fileString = null; //文件内容
+    private ArrayList<Integer> numList = new ArrayList<>(); //取出数组
 
     /**
-     * New NumFile
-     * @param filePath
+     * New NumFile 构造方法
+     *
+     * @param filePath 文件路径
      */
-    public NumFile(String filePath) {
-        this.filePath = filePath;
-        numFile = new File(filePath);
+    NumFile(String filePath) {
+        this.filePath = filePath; //设定文件路径
+        numFile = new File(filePath); //创建文件对象
     }
 
     /**
-     * Load file from file system to fileString.
+     * 从文件系统加载文件
      */
     private void readFile() throws IOException {
         BufferedReader fileBufferedReader = new BufferedReader(new FileReader(numFile));
-        fileString = fileBufferedReader.readLine();
-        fileBufferedReader.close();
+        fileString = fileBufferedReader.readLine(); //读取一行
+        fileBufferedReader.close(); //关闭Reader
     }
 
     /**
-     * Save file from fileString to file system.
+     * 保存文件到文件系统
      */
-    public void saveFile() throws IOException {
-        FileOutputStream fileOutputStream= new FileOutputStream(new File(filePath));
-        splitNumWriter(fileOutputStream);
+    void saveFile() throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(new File(filePath)); //创建保存文件输出流
+        splitNumWriter(fileOutputStream); //写入流
     }
 
-    public ArrayList<Integer> loadFile() throws IOException {
+    /**
+     * 加载文件
+     *
+     * @throws IOException
+     */
+    void loadFile() throws IOException {
         readFile();
-        if(fileString == null) {
-            throw new RuntimeException("Have nothing to Load");
+        if (fileString == null) {
+            throw new RuntimeException("File path is null");
         }
 
-        String[] numStrings = fileString.split(" "); //Split fileString ready to load in numList
-        for(String str : numStrings) {
+        String[] numStrings = fileString.split(" "); //通过空格分隔
+        for (String str : numStrings) {
             numList.add(Integer.valueOf(str));
         }
-        return numList;
     }
 
     /**
-     * This Writer can write split num string to OutputStream
+     * 将List写入流
+     *
      * @param out
      */
-    public void splitNumWriter(OutputStream out) {
-        PrintStream p = new PrintStream(out);
-        Iterator<Integer> numIterator = numList.iterator();
-        while(numIterator.hasNext()) {
+    void splitNumWriter(OutputStream out) {
+        PrintStream p = new PrintStream(out); //创建Print流
+
+        Iterator<Integer> numIterator = numList.iterator(); //获取迭代器
+        while (numIterator.hasNext()) { //遍历写入
             p.print(numIterator.next() + " ");
         }
+
+        //写入后操作
         p.println();
         p.close();
     }
 
-    public void loadList(ArrayList<Integer> numList) {
+    void loadList(ArrayList<Integer> numList) {
         this.numList = numList;
     }
 
-    public ArrayList<Integer> getList() {
+    ArrayList<Integer> getList() {
         return numList;
     }
 }

@@ -5,16 +5,16 @@ import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        NumFile inFile = new NumFile("." + File.separatorChar +"data.txt"); //Use File.separatorChar to adapt Win & *nix
-        inFile.loadFile(); //Load String to ArrayList
-        
-        ArrayList<Integer> numList = inFile.getList(); //Get a ArrayList from NumFile
-        
-        Collections.sort(numList); //Sort ArrayList
-        
+        NumFile inFile = new NumFile("." + File.separatorChar + "data.txt"); //Use File.separatorChar to adapt Win & *nix
+        inFile.loadFile(); //加载文件
+
+        ArrayList<Integer> numList = inFile.getList(); //获取List
+
+        Collections.sort(numList); //排序List
+
         NumFile outFile = new NumFile("." + File.separatorChar + "number.txt");
         outFile.loadList(numList);
-        inFile.splitNumWriter(System.out); //Print ArrayList to Console
-        outFile.saveFile(); 
+        inFile.splitNumWriter(System.out); //打印List到CLI
+        outFile.saveFile(); //保存文件
     }
 }
