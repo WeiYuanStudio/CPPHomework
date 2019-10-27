@@ -1,9 +1,8 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Comparator;
 
 class NumFile {
-    private String filePath; //文件路径
     private File numFile; //文件对象
     private String fileString = null; //文件内容
     private ArrayList<Integer> numList = new ArrayList<>(); //取出数组
@@ -14,7 +13,6 @@ class NumFile {
      * @param filePath 文件路径
      */
     NumFile(String filePath) {
-        this.filePath = filePath; //设定文件路径
         numFile = new File(filePath); //创建文件对象
     }
 
@@ -28,27 +26,19 @@ class NumFile {
     }
 
     /**
-     * 保存文件到文件系统
-     */
-    void saveFile() throws IOException {
-        FileOutputStream fileOutputStream = new FileOutputStream(new File(filePath)); //创建保存文件输出流
-        splitNumWriter(fileOutputStream); //写入流
-    }
-
-    /**
      * 加载文件
      *
      * @throws IOException
      */
     void loadFile() throws IOException {
-        readFile();
-        if (fileString == null) {
-            throw new RuntimeException("File path is null");
-        }
+        readFile(); //读取文件字符串
 
-        String[] numStrings = fileString.split(" "); //通过空格分隔
+        if (fileString == null) //检查文件内容是否为空
+            throw new RuntimeException("文件为空");
+
+        String[] numStrings = fileString.split(" "); //通过空格分隔字符串
         for (String str : numStrings) {
-            numList.add(Integer.valueOf(str));
+            numList.add(Integer.valueOf(str)); //转入List<Integer>
         }
     }
 
@@ -58,23 +48,30 @@ class NumFile {
      * @param out
      */
     void splitNumWriter(OutputStream out) {
-        PrintStream p = new PrintStream(out); //创建Print流
-
-        Iterator<Integer> numIterator = numList.iterator(); //获取迭代器
-        while (numIterator.hasNext()) { //遍历写入
-            p.print(numIterator.next() + " ");
-        }
+        PrintStream p = new PrintStream(out) {
+            @Override //重写输出方法，加入空格分隔数字
+            public void print(Object obj) {
+                super.print(obj.toString() + ' ');
+            }
+        }; //创建Print流
+        numList.forEach(p::print);
 
         //写入后操作
         p.println();
-        p.close();
     }
 
-    void loadList(ArrayList<Integer> numList) {
-        this.numList = numList;
-    }
+    void sortNumWriter(OutputStream out) {
+        PrintStream p = new PrintStream(out) {
+            @Override //重写输出方法，加入空格分隔数字
+            public void print(Object obj) {
+                super.print(obj.toString() + ' ');
+            }
+        };
+        numList.stream()
+                .sorted(Comparator.naturalOrder())
+                .forEach(p::print);
 
-    ArrayList<Integer> getList() {
-        return numList;
+        //写入后操作
+        p.println();
     }
 }
